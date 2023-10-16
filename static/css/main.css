@@ -1,3 +1,9 @@
 body {
     background-color: lightgrey;
 }
+
+/*HEADER*/
+.header__img{
+    height: 64px;
+    width: 64px;
+}
