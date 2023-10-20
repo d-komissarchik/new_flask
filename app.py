@@ -1,6 +1,19 @@
 from flask import Flask, render_template, url_for
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
+app.config['SQLAlCHEMY_DATABASE_URI'] = 'sqlite:///newflask.db'
+db = SQLAlchemy(app)
+
+
+
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True);
+    title = db.Column(db.String(300), nullable=False);
+
+
+
 
 
 @app.route('/')
