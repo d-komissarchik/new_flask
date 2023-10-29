@@ -13,9 +13,6 @@ class Post(db.Model):
     title = db.Column(db.String(300), nullable=False);
 
 
-
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
